@@ -475,3 +475,75 @@ h1 {
     text-transform: uppercase;
     margin-top: 20px;
 }
+
+.hero {
+    background-image: url('../image/nom-de-ton-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+}
+
+.hero {
+    position: relative;
+    background-image: url('../image/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* pleine hauteur */
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.6); /* gris semi-transparent */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* === Responsive Design pour Mobile === */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  .service-grid, .gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  .contact-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .map-container img {
+    height: auto;
+    max-width: 100%;
+  }
+}
